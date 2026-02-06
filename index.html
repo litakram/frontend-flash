@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes floatImage {
+        0%, 100% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(30px) scale(1.05);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .float-image {
+        animation: floatImage 8s ease-in-out infinite;
+      }
+
+      .slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .pulse-dot {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .icon-1::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #ECDC2C;
+        border-radius: 4px;
+      }
+
+      .icon-2::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #ECDC2C;
+        border-radius: 50%;
+        box-shadow: -8px -8px 0 -5px #ECDC2C, 8px -8px 0 -5px #ECDC2C, 0 8px 0 -5px #ECDC2C;
+      }
+
+      .icon-3::before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 18px solid #ECDC2C;
+      }
+
+      .title-highlight {
+        background: linear-gradient(135deg, #ECDC2C 0%, #f5e447 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-[#081d3f] to-[#1e3a6e] min-h-screen overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

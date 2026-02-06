@@ -1,0 +1,131 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto --webkit-focus-ring-color;
+}
+
+/* Inputs and selects should share the same dark background and border */
+input,
+select,
+textarea {
+  background-color: rgba(255,255,255,0.03);
+  color: #fff;
+  border: 1px solid rgba(148,163,184,0.6); /* tailwind gray-600-ish */
+  border-radius: 0.5rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select:focus {
+  outline: 2px solid rgba(236,220,44,0.3);
+  outline-offset: 2px;
+}
+
+/* Styling options where supported by the UA */
+select option {
+  background-color: rgba(8,29,63,0.98);
+  color: #fff;
+}
+
+/* Small helper for a visually consistent arrow in the select wrapper */
+.select-arrow {
+  pointer-events: none;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* A4 layout & print helpers for the report display (landscape) */
+.report-a4 {
+  max-width: 297mm; /* landscape width */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.report-a4-landscape {
+  max-width: 297mm;
+}
+
+@media print {
+  .report-a4 {
+    width: 297mm;
+    min-height: 210mm;
+  }
+  body {
+    background: #fff;
+    --webkit-print-color-adjust: exact;
+  }
+}
+
+/* Ensure printed pages use A4 landscape */
+@page {
+  size: A4 landscape;
+  margin: 15mm;
+}

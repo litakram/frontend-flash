@@ -1,0 +1,526 @@
+{
+  "audit_framework": {
+    "title": {
+      "en": "Flash AI Maturity Audit",
+      "fr": "Audit Flash Maturité IA",
+      "ar": "تقييم نضج الذكاء الاصطناعي"
+    },
+    "version": "1.0",
+    "description": {
+      "en": "Minimalist assessment framework based on the 6-axis global standard.",
+      "fr": "Cadre d'évaluation minimaliste basé sur la norme globale à 6 axes.",
+      "ar": "إطار تقييم بسيط قائم على معيار عالمي مكوّن من 6 محاور."
+    },
+    "scoring_system": {
+      "initial": 1,
+      "defined": 3,
+      "advanced": 5
+    },
+    "axes": [
+      {
+        "id": "strategy",
+        "title": {
+          "en": "AI Strategy",
+          "fr": "Stratégie IA",
+          "ar": "استراتيجية الذكاء الاصطناعي"
+        },
+        "weight": 0.25,
+        "description": {
+          "en": "Alignment of AI vision with business objectives.",
+          "fr": "Alignement de la vision IA avec les objectifs business.",
+          "ar": "مواءمة رؤية الذكاء الاصطناعي مع الأهداف التجارية."
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "text": {
+              "en": "What is your level of maturity in AI vision and roadmap?",
+              "fr": "Quel est votre niveau de maturité en vision et feuille de route IA?",
+              "ar": "ما هو مستوى النضج في رؤية الذكاء الاصطناعي وخارطة الطريق؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "No formal strategy, ad-hoc initiatives.",
+                  "fr": "Aucune stratégie formalisée, initiatives ad-hoc.",
+                  "ar": "لا توجد استراتيجية رسمية، مبادرات عشوائية."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Documented vision and 1-2 year roadmap.",
+                  "fr": "Vision documentée et roadmap à 1-2 ans.",
+                  "ar": "رؤية موثقة وخارطة طريق لمدة 1-2 سنة."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Clear strategy aligned with business, 3-5 year roadmap.",
+                  "fr": "Stratégie claire alignée business, roadmap 3-5 ans.",
+                  "ar": "استراتيجية واضحة متماشية مع العمل، خارطة طريق 3-5 سنوات."
+                }
+              }
+            ]
+          },
+          {
+            "id": "q2",
+            "text": {
+              "en": "How do you measure project budgets and ROI for AI?",
+              "fr": "Comment mesurez-vous le budget et le ROI des projets IA?",
+              "ar": "كيف تقيسون ميزانية ومردودية مشاريع الذكاء الاصطناعي؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "No dedicated budget, ROI not measured.",
+                  "fr": "Pas de budget dédié, ROI non mesuré.",
+                  "ar": "لا ميزانية مخصصة، لا يتم قياس العائد على الاستثمار."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Budget identified, ROI measured on large projects.",
+                  "fr": "Budget identifié, ROI mesuré sur gros projets.",
+                  "ar": "ميزانية محددة، يتم قياس العائد على المشاريع الكبيرة."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Systematic tracking of value and ROI.",
+                  "fr": "Suivi systématique de la valeur et ROI.",
+                  "ar": "متابعة منهجية للقيمة والعائد على الاستثمار."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "title": {
+          "en": "Data",
+          "fr": "Data",
+          "ar": "البيانات"
+        },
+        "weight": 0.20,
+        "description": {
+          "en": "Data quality, governance and accessibility.",
+                  "fr": "Qualité, gouvernance et accessibilité des données.",
+          "ar": "جودة البيانات، الحوكمة وإمكانية الوصول."
+        },
+        "questions": [
+          {
+            "id": "q3",
+            "text": {
+              "en": "What is your level of data quality and governance?",
+              "fr": "Quel est votre niveau de qualité et gouvernance des données?",
+              "ar": "ما هو مستوى جودة البيانات والحوكمة لديكم؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Reactive management (errors are fixed).",
+                  "fr": "Gestion réactive (correction des erreurs).",
+                  "ar": "إدارة تفاعلية (تصحيح الأخطاء)."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Standards defined for critical data.",
+                  "fr": "Standards définis sur données critiques.",
+                  "ar": "معايير محددة للبيانات الحرجة."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Mature and automated governance.",
+                  "fr": "Gouvernance mature et automatisée.",
+                  "ar": "حوكمة ناضجة ومؤتمتة."
+                }
+              }
+            ]
+          },
+          {
+            "id": "q4",
+            "text": {
+              "en": "How mature is your data architecture?",
+              "fr": "Quelle est la maturité de votre architecture data?",
+              "ar": "ما مدى نضج بنية البيانات لديكم؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Traditional databases, manual extractions.",
+                  "fr": "Bases traditionnelles, extractions manuelles.",
+                  "ar": "قواعد بيانات تقليدية، استخلاصات يدوية."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Data Lake/Warehouse with some pipelines.",
+                  "fr": "Data Lake/Warehouse et quelques pipelines.",
+                  "ar": "بحيرة بيانات / مستودع وعمليات نقل محدودة."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Modern real-time architecture (DataOps).",
+                  "fr": "Architecture moderne temps réel (DataOps).",
+                  "ar": "بنية حديثة بالزمن الحقيقي (DataOps)."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "technologies",
+        "title": {
+          "en": "Technologies",
+          "fr": "Technologies",
+          "ar": "التقنيات"
+        },
+        "weight": 0.18,
+        "description": {
+          "en": "Development tools and industrialization (MLOps).",
+          "fr": "Outils de développement et industrialisation (MLOps).",
+          "ar": "أدوات التطوير والتشغيل (MLOps)."
+        },
+        "questions": [
+          {
+            "id": "q5",
+            "text": {
+              "en": "What is your AI development environment?",
+              "fr": "Quel est votre environnement de développement IA?",
+              "ar": "ما هو بيئة تطوير الذكاء الاصطناعي لديكم؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Scattered tools, no standards.",
+                  "fr": "Outils dispersés, pas de standard.",
+                  "ar": "أدوات متفرقة، لا معايير."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Partial standards on tools.",
+                  "fr": "Standards partiels sur les outils.",
+                  "ar": "معايير جزئية للأدوات."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Centralized, integrated MLOps platform.",
+                  "fr": "Plateforme MLOps centralisée et intégrée.",
+                  "ar": "منصة MLOps مركزية ومتكاملة."
+                }
+              }
+            ]
+          },
+          {
+            "id": "q6",
+            "text": {
+              "en": "How do you deploy your AI models (MLOps)?",
+              "fr": "Comment déployez-vous vos modèles IA (MLOps)?",
+              "ar": "كيف تنشرون نماذج الذكاء الاصطناعي (MLOps)؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Manual and complex.",
+                  "fr": "Manuel et complexe.",
+                  "ar": "يدوي ومعقّد."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Automated on main models.",
+                  "fr": "Automatisé sur les modèles principaux.",
+                  "ar": "مؤتمت على النماذج الرئيسية."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Full CI/CD (tests, auto rollback).",
+                  "fr": "CI/CD complet (tests, rollback auto).",
+                  "ar": "CI/CD كامل (اختبارات، استرجاع تلقائي)."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "governance",
+        "title": {
+          "en": "Governance & Ethics",
+          "fr": "Gouvernance & Éthique",
+          "ar": "الحوكمة والأخلاقيات"
+        },
+        "weight": 0.15,
+        "description": {
+          "en": "Risk management, ethics and regulatory compliance.",
+          "fr": "Gestion des risques, éthique et conformité réglementaire.",
+          "ar": "إدارة المخاطر، الأخلاقيات والامتثال التنظيمي."
+        },
+        "questions": [
+          {
+            "id": "q7",
+            "text": {
+              "en": "What is your level of risk management and AI ethics?",
+              "fr": "Quel est votre niveau de gestion des risques et éthique IA?",
+              "ar": "ما هو مستوى إدارة المخاطر وأخلاقيات الذكاء الاصطناعي لديكم؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Not formalized.",
+                  "fr": "Non formalisé.",
+                  "ar": "غير مُؤطَّر."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Ethics charter and risk analysis.",
+                  "fr": "Charte éthique et analyse de risques.",
+                  "ar": "ميثاق أخلاقيات وتحليل المخاطر."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Ethics and Security 'By Design'.",
+                  "fr": "Éthique et Sécurité 'By Design'.",
+                  "ar": "الأخلاقيات والأمن 'من التصميم'."
+                }
+              }
+            ]
+          },
+          {
+            "id": "q8",
+            "text": {
+              "en": "How do you handle regulatory compliance (e.g. AI Act)?",
+              "fr": "Comment gérez-vous la conformité réglementaire (ex: AI Act)?",
+              "ar": "كيف تتعاملون مع الامتثال التنظيمي (مثل AI Act)؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Reactive management when needed.",
+                  "fr": "Gestion réactive au besoin.",
+                  "ar": "إدارة تفاعلية عند الحاجة."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Monitoring and validation of key systems.",
+                  "fr": "Veille et validation des systèmes clés.",
+                  "ar": "مراقبة والتحقق من الأنظمة الرئيسية."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Proactive anticipation and regular audits.",
+                  "fr": "Anticipation proactive et audits réguliers.",
+                  "ar": "توقّعات استباقية وتدقيقات دورية."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "culture",
+        "title": {
+          "en": "Culture & People",
+          "fr": "Culture & Humain",
+          "ar": "الثقافة والأفراد"
+        },
+        "weight": 0.12,
+        "description": {
+          "en": "Skills, training and team adoption.",
+          "fr": "Compétences, formation et adoption par les équipes.",
+          "ar": "المهارات، التدريب واعتماد الفرق."
+        },
+        "questions": [
+          {
+            "id": "q9",
+            "text": {
+              "en": "What is your level of AI skills and training?",
+              "fr": "Quel est votre niveau de compétences et formation IA?",
+              "ar": "ما هو مستوى المهارات والتدريب في الذكاء الاصطناعي لديكم؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Self-learning and individual efforts.",
+                  "fr": "Auto-apprentissage individuel.",
+                  "ar": "التعلم الذاتي والجهود الفردية."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Trainings for tech and managers.",
+                  "fr": "Formations pour tech et managers.",
+                  "ar": "دورات تدريبية للتقنيين والمديرين."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Company-wide AI academy.",
+                  "fr": "Académie IA pour toute l'entreprise.",
+                  "ar": "أكاديمية ذكاء اصطناعي للشركة بأكملها."
+                }
+              }
+            ]
+          },
+          {
+            "id": "q10",
+            "text": {
+              "en": "How do your teams collaborate on AI projects?",
+              "fr": "Comment collaborent vos équipes sur les projets IA?",
+              "ar": "كيف تتعاون فرقكم في مشاريع الذكاء الاصطناعي؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "IT silos (isolated from the business).",
+                  "fr": "Silos IT (isolés du métier).",
+                  "ar": "عزلة فرق تقنية المعلومات (منعزلة عن الأعمال)."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Cross-functional teams on key projects.",
+                  "fr": "Équipes mixtes sur projets clés.",
+                  "ar": "فرق متعددة التخصصات على المشاريع الرئيسية."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Daily co-creation (squads).",
+                  "fr": "Co-création quotidienne (Squads).",
+                  "ar": "التشارك اليومي في الإبداع (فرق)."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "infrastructure",
+        "title": {
+          "en": "Infrastructure",
+          "fr": "Infrastructure",
+          "ar": "البنية التحتية"
+        },
+        "weight": 0.10,
+        "description": {
+          "en": "Compute resources (Cloud/GPU) and monitoring.",
+          "fr": "Ressources de calcul (Cloud/GPU) et monitoring.",
+          "ar": "موارد الحوسبة (سحابة / GPU) والمراقبة."
+        },
+        "questions": [
+          {
+            "id": "q11",
+            "text": {
+              "en": "What are your compute resources for AI?",
+              "fr": "Quelles sont vos ressources de calcul pour l'IA?",
+              "ar": "ما هي موارد الحوسبة المتاحة للذكاء الاصطناعي؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "Classic servers / basic cloud.",
+                  "fr": "Serveurs classiques / Cloud basique.",
+                  "ar": "خوادم تقليدية / سحابة أساسية."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Cloud with occasional GPUs.",
+                  "fr": "Cloud avec GPU ponctuels.",
+                  "ar": "سحابة مع وحدات معالجة رسوميات عند الحاجة."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Cloud-native auto-scalable (GPU/TPU).",
+                  "fr": "Cloud Native auto-scalable (GPU/TPU).",
+                  "ar": "قابلة للتوسيع تلقائياً (GPU/TPU) في السحابة."
+                }
+              }
+            ]
+          },
+          {
+            "id": "q12",
+            "text": {
+              "en": "What is your level of monitoring and observability?",
+              "fr": "Quel est votre niveau de monitoring et observabilité?",
+              "ar": "ما هو مستوى المراقبة والملاحظة لديكم؟"
+            },
+            "options": [
+              {
+                "value": 1,
+                "label": {
+                  "en": "No post-deployment monitoring.",
+                  "fr": "Pas de monitoring post-déploiement.",
+                  "ar": "لا توجد مراقبة بعد النشر."
+                }
+              },
+              {
+                "value": 3,
+                "label": {
+                  "en": "Basic metrics and error tracking.",
+                  "fr": "Métriques de base et erreurs.",
+                  "ar": "مقاييس أساسية وتتبع الأخطاء."
+                }
+              },
+              {
+                "value": 5,
+                "label": {
+                  "en": "Real-time observability (drift).",
+                  "fr": "Observabilité temps réel (Drift).",
+                  "ar": "مراقبة بالزمن الحقيقي (انحراف)."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
