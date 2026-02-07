@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import logoLight from '../../assets/images/ai-crafters-logo-light.png'
+import logoArabicLight from '../../assets/images/ai-crafters-logo-arabic-light.png'
 
 interface Axis {
   id: number
@@ -30,7 +32,7 @@ interface ReportDisplayProps {
 export default function ReportDisplay({ report }: ReportDisplayProps) {
   const { t, i18n } = useTranslation()
   const lang = i18n?.language || 'en'
-  const logoSrc = (lang && lang.startsWith('ar')) ? '/assets/images/ai-crafters-logo-arabic-light.png' : '/assets/images/ai-crafters-logo-light.png'
+  const logoSrc = (lang && lang.startsWith('ar')) ? logoArabicLight : logoLight
 
   const getScoreColor = (score: number) => {
     if (score <= 1) return 'bg-red-600'
