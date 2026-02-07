@@ -138,10 +138,11 @@ export default function AuditForm({ onBack }: AuditFormProps) {
       {/* Back Button - Top Left */}
       <button
         onClick={onBack}
-        className="fixed top-6 start-6 z-40 flex items-center gap-2 text-white hover:text-[#ECDC2C] transition-colors font-semibold text-sm sm:text-base"
+        className="fixed top-6 start-6 z-40 flex items-center gap-2 transition-colors text-sm sm:text-base"
+        style={{ color: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: '0.875rem' }}
       >
         <span className="text-2xl">←</span>
-        <span>{t('buttons.back')}</span> 
+        <span>{t('buttons.back')}</span>
       </button>
 
       {/* Fixed Progress Bar */}
@@ -200,7 +201,15 @@ export default function AuditForm({ onBack }: AuditFormProps) {
                 <button
                   onClick={handlePrevious}
                   disabled={currentAxisIndex === 0 && currentQuestionIndex === 0}
-                  className="px-4 sm:px-6 py-2 text-gray-400 disabled:opacity-30 hover:text-white transition-colors text-sm sm:text-base whitespace-nowrap"
+                  style={{
+                    padding: '0.5rem 1rem',
+                    color: (currentAxisIndex === 0 && currentQuestionIndex === 0) ? '#9CA3AF' : '#fff',
+                    opacity: (currentAxisIndex === 0 && currentQuestionIndex === 0) ? 0.3 : 1,
+                    cursor: (currentAxisIndex === 0 && currentQuestionIndex === 0) ? 'not-allowed' : 'pointer',
+                    whiteSpace: 'nowrap',
+                    fontSize: '0.875rem',
+                    transition: 'color 0.2s'
+                  }}
                 >
                   ← {t('buttons.previous')}
                 </button>
@@ -265,7 +274,13 @@ export default function AuditForm({ onBack }: AuditFormProps) {
                 </div>
 
                 <div className="flex items-center justify-between gap-4">
-                  <button type="button" onClick={handlePrevious} className="px-4 sm:px-6 py-2 text-gray-400 hover:text-white transition-colors text-sm sm:text-base whitespace-nowrap">{t('buttons.back')}</button>
+                  <button
+                    type="button"
+                    onClick={handlePrevious}
+                    style={{ padding: '0.5rem 1rem', color: '#9CA3AF', cursor: 'pointer', whiteSpace: 'nowrap', fontSize: '0.875rem', transition: 'color 0.2s' }}
+                  >
+                    {t('buttons.back')}
+                  </button>
 
                   <button type="button" onClick={handleSubmitProfile} disabled={!isPersonalValid() || loading} className={`px-4 sm:px-6 py-2 bg-gradient-to-r from-[#ECDC2C] to-[#f5e447] text-[#081d3f] rounded-xl font-semibold whitespace-nowrap text-sm sm:text-base transition-all ${!isPersonalValid() || loading ? 'opacity-40 cursor-not-allowed hover:shadow-none' : 'hover:shadow-lg'}`}>
                     {loading ? (
